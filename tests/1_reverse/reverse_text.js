@@ -1,6 +1,6 @@
 /**
- * Complete function that will accept text and will return reversed version of
- * the inputed text.
+ * Complete the function so that it will accept text and return
+ * the reversed version of the input text.
  */
 
 export default function reverseText(text) {

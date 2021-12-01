@@ -1,6 +1,6 @@
 /**
- * Implement function that will test (returns boolean) if given word is an
- * palindrome - reads the same backwards as forwards.
+ * Implement a function that will test if given word is a
+ * palindrome (reads the same backwards as forwards) and return a boolean.
  */
 
 export default function isPalindrome(word) {
