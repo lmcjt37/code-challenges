@@ -38,8 +38,8 @@ const mockData = [
 // Utilities
 
 const AutoCompleteMock = ({ children }) => {
-  const [value, set] = useState('')
-  const onChange = useCallback((event) => set(event.target.value), [set])
+  const [value, setValue] = useState('')
+  const onChange = useCallback((event) => setValue(event.target.value), [])
   return children({ data: mockData, value, onChange })
 }
 
