@@ -3,9 +3,9 @@ const path = require('path')
 module.exports = {
   stories: ['../src/**/*.stories.js'],
   addons: [
-    '@storybook/addon-knobs/register',
-    '@storybook/addon-actions/register',
-    '@storybook/addon-viewport/register',
+    '@storybook/addon-knobs',
+    '@storybook/addon-actions',
+    '@storybook/addon-viewport',
   ],
   webpackFinal: async (config) => {
     config.module.rules = config.module.rules.filter(
