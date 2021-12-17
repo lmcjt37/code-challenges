@@ -129,10 +129,14 @@ it.each([
     ],
   ],
 ])('should display fizzbuzz(%s) correctly', (value, expected) => {
-  const logSpy = jest.spyOn(global.console, 'log')
+  const logSpy = jest.spyOn(global.console, 'log').mockImplementation(() => {})
   fizzbuzz(value)
-  expected.forEach((element) => {
-    expect(logSpy).toHaveBeenCalledWith(element)
+
+  expected.forEach((element, index) => {
+    expect(logSpy.mock.calls[index][0]).toBe(element)
   })
+  expect(logSpy.mock.calls.length).toBe(value)
+
   logSpy.mockClear()
+  logSpy.mockRestore()
 })
